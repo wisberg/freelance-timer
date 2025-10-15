@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freelance Timer</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="app-header">
+        <img
+          src="Freelance_Timer_Logo_White.png"
+          alt="Freelance Timer"
+          class="app-logo"
+        />
+      </header>
+
+      <section class="card" id="live-timer">
+        <div class="card-header">
+          <h2>Live Timer</h2>
+          <span id="live-clock" class="timer-display"></span>
+        </div>
+        <div id="current-session" class="current-session">
+          <p class="empty">No active session</p>
+        </div>
+      </section>
+
+      <section class="card" id="live-timers">
+        <div class="card-header">
+          <h2>All Domains</h2>
+          <span id="live-clock" aria-hidden="true"></span>
+        </div>
+        <ul id="live-items" class="list"></ul>
+        <p class="empty" id="live-empty">No activity yet.</p>
+        <button id="live-see-more" class="link-button" hidden>
+          See more
+        </button>
+      </section>
+
+      <section class="card" id="reporting">
+        <h2>Export Report</h2>
+        <div id="group-selection">
+          <p>Select domains to include in the report:</p>
+          <div id="domain-groups"></div>
+          <button id="group-see-more" class="link-button" hidden>
+            See more
+          </button>
+        </div>
+        <div class="actions">
+          <button id="generate-pdf" class="primary">Download Report</button>
+          <button id="generate-pdf-reset" class="ghost">
+            Download & Reset
+          </button>
+        </div>
+        <div id="report-status" role="status" aria-live="polite"></div>
+        <div id="session-summary"></div>
+      </section>
+
+      <button id="clear-all" type="button" class="ghost clear-all-btn">
+        Clear All Sessions
+      </button>
+
+      <footer class="app-footer">
+        <small>
+          Designed &amp; developed by
+          <a href="https://duffisberg.com" target="_blank" rel="noopener"
+            >Duff Isberg</a
+          >
+        </small>
+      </footer>
+    </main>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
